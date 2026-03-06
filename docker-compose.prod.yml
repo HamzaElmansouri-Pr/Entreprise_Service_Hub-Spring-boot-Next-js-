@@ -1,0 +1,106 @@
+version: '3.8'
+
+services:
+  # ── Database Service ────────────────────────────────────────────────────────
+  postgres:
+    image: postgres:17-alpine
+    container_name: esh-postgres-prod
+    environment:
+      POSTGRES_DB: enterprise_hub
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: elite_password_2026
+    volumes:
+      - postgres_data_prod:/var/lib/postgresql/data
+    networks:
+      - db-net
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U admin -d enterprise_hub" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+
+  # ── Backend Service ─────────────────────────────────────────────────────────
+  backend:
+    build:
+      context: ./enterprise-service-hub
+      dockerfile: Dockerfile
+    container_name: esh-backend-prod
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/enterprise_hub
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: elite_password_2026
+      SPRING_PROFILES_ACTIVE: prod
+      SERVER_PORT: 8080
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    networks:
+      - db-net
+      - backend-net
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/api/actuator/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ── Frontend Service ────────────────────────────────────────────────────────
+  frontend:
+    build:
+      context: ./nova-frontend
+      dockerfile: Dockerfile
+    container_name: esh-frontend-prod
+    environment:
+      NEXT_PUBLIC_API_BASE_URL: http://backend:8080/api/v1
+    ports:
+      - "3000:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - backend-net
+      - frontend-net
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+
+  # ── Redis Service ───────────────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: esh_redis_prod
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - backend-net
+
+networks:
+  db-net:
+    driver: bridge
+  backend-net:
+    driver: bridge
+  frontend-net:
+    driver: bridge
+
+volumes:
+  postgres_data_prod:
+  redis_data:

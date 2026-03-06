@@ -1,0 +1,642 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< nova:enterprise-service-hub >---------------------
+[INFO] Building enterprise-service-hub 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ enterprise-service-hub ---
+[INFO] Deleting C:\Users\profa\OneDrive\Desktop\Project\Enterprise-Service-Hub\enterprise-service-hub\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ enterprise-service-hub ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ enterprise-service-hub ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 107 source files with javac [debug parameters release 21] to target\classes
+[INFO] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/security/RateLimitFilter.java: C:\Users\profa\OneDrive\Desktop\Project\Enterprise-Service-Hub\enterprise-service-hub\src\main\java\nova\enterprise_service_hub\security\RateLimitFilter.java uses or overrides a deprecated API.
+[INFO] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/security/RateLimitFilter.java: Recompile with -Xlint:deprecation for details.
+[INFO] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AuditLogService.java: C:\Users\profa\OneDrive\Desktop\Project\Enterprise-Service-Hub\enterprise-service-hub\src\main\java\nova\enterprise_service_hub\service\AuditLogService.java uses unchecked or unsafe operations.
+[INFO] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AuditLogService.java: Recompile with -Xlint:unchecked for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/GlobalExceptionHandler.java:[129,25] method writeJsonError(jakarta.servlet.http.HttpServletResponse,int,java.lang.String,java.lang.String) is already defined in class nova.enterprise_service_hub.config.GlobalExceptionHandler
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[114,35] cannot find symbol
+  symbol:   method getRoles()
+  location: variable admin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[115,38] cannot find symbol
+  symbol:   method getRoles()
+  location: variable admin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[127,22] cannot find symbol
+  symbol:   method setFullName(java.lang.String)
+  location: variable admin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[128,22] cannot find symbol
+  symbol:   method setEmail(java.lang.String)
+  location: variable admin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[129,22] cannot find symbol
+  symbol:   method setPassword(java.lang.String)
+  location: variable admin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[130,22] cannot find symbol
+  symbol:   method setRoles(java.util.Set<nova.enterprise_service_hub.model.Role>)
+  location: variable admin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[131,22] cannot find symbol
+  symbol:   method setTenantId(java.lang.String)
+  location: variable admin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[146,32] cannot find symbol
+  symbol:   method getRoles()
+  location: variable sa of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[147,35] cannot find symbol
+  symbol:   method getRoles()
+  location: variable sa of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[158,27] cannot find symbol
+  symbol:   method setFullName(java.lang.String)
+  location: variable superAdmin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[159,27] cannot find symbol
+  symbol:   method setEmail(java.lang.String)
+  location: variable superAdmin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[160,27] cannot find symbol
+  symbol:   method setPassword(java.lang.String)
+  location: variable superAdmin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[161,27] cannot find symbol
+  symbol:   method setRoles(java.util.Set<nova.enterprise_service_hub.model.Role>)
+  location: variable superAdmin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[163,27] cannot find symbol
+  symbol:   method setTenantId(java.lang.String)
+  location: variable superAdmin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[177,23] cannot find symbol
+  symbol:   method setContactEmail(java.lang.String)
+  location: variable tenant of type nova.enterprise_service_hub.model.Tenant
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[178,23] cannot find symbol
+  symbol:   method setEnabledModules(java.util.Set<java.lang.String>)
+  location: variable tenant of type nova.enterprise_service_hub.model.Tenant
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[190,23] cannot find symbol
+  symbol:   method setAgencyName(java.lang.String)
+  location: variable config of type nova.enterprise_service_hub.model.GlobalConfig
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[191,23] cannot find symbol
+  symbol:   method setContactEmail(java.lang.String)
+  location: variable config of type nova.enterprise_service_hub.model.GlobalConfig
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[192,23] cannot find symbol
+  symbol:   method setContactPhone(java.lang.String)
+  location: variable config of type nova.enterprise_service_hub.model.GlobalConfig
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[193,23] cannot find symbol
+  symbol:   method setLinkedInUrl(java.lang.String)
+  location: variable config of type nova.enterprise_service_hub.model.GlobalConfig
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[194,23] cannot find symbol
+  symbol:   method setTwitterUrl(java.lang.String)
+  location: variable config of type nova.enterprise_service_hub.model.GlobalConfig
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[195,23] cannot find symbol
+  symbol:   method setLogoUrl(java.lang.String)
+  location: variable config of type nova.enterprise_service_hub.model.GlobalConfig
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[206,19] cannot find symbol
+  symbol:   method setTitle(java.lang.String)
+  location: variable s1 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[207,19] cannot find symbol
+  symbol:   method setSubtitle(java.lang.String)
+  location: variable s1 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[208,19] cannot find symbol
+  symbol:   method setCtaText(java.lang.String)
+  location: variable s1 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[209,19] cannot find symbol
+  symbol:   method setCtaLink(java.lang.String)
+  location: variable s1 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[210,19] cannot find symbol
+  symbol:   method setDisplayOrder(int)
+  location: variable s1 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[213,19] cannot find symbol
+  symbol:   method setTitle(java.lang.String)
+  location: variable s2 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[214,19] cannot find symbol
+  symbol:   method setSubtitle(java.lang.String)
+  location: variable s2 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[215,19] cannot find symbol
+  symbol:   method setCtaText(java.lang.String)
+  location: variable s2 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[216,19] cannot find symbol
+  symbol:   method setCtaLink(java.lang.String)
+  location: variable s2 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[217,19] cannot find symbol
+  symbol:   method setDisplayOrder(int)
+  location: variable s2 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[232,19] cannot find symbol
+  symbol:   method setTitle(java.lang.String)
+  location: variable s1 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[233,19] cannot find symbol
+  symbol:   method setSlug(java.lang.String)
+  location: variable s1 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[234,19] cannot find symbol
+  symbol:   method setDescription(java.lang.String)
+  location: variable s1 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[238,19] cannot find symbol
+  symbol:   method setIconName(java.lang.String)
+  location: variable s1 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[239,29] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,int,int
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[241,19] cannot find symbol
+  symbol:   method setDisplayOrder(int)
+  location: variable s1 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[242,19] cannot find symbol
+  symbol:   method setActive(boolean)
+  location: variable s1 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[245,19] cannot find symbol
+  symbol:   method setTitle(java.lang.String)
+  location: variable s2 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[246,19] cannot find symbol
+  symbol:   method setSlug(java.lang.String)
+  location: variable s2 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[247,19] cannot find symbol
+  symbol:   method setDescription(java.lang.String)
+  location: variable s2 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[251,19] cannot find symbol
+  symbol:   method setIconName(java.lang.String)
+  location: variable s2 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[252,29] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,int,int
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[254,19] cannot find symbol
+  symbol:   method setDisplayOrder(int)
+  location: variable s2 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[255,19] cannot find symbol
+  symbol:   method setActive(boolean)
+  location: variable s2 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[258,19] cannot find symbol
+  symbol:   method setTitle(java.lang.String)
+  location: variable s3 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[259,19] cannot find symbol
+  symbol:   method setSlug(java.lang.String)
+  location: variable s3 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[260,19] cannot find symbol
+  symbol:   method setDescription(java.lang.String)
+  location: variable s3 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[264,19] cannot find symbol
+  symbol:   method setIconName(java.lang.String)
+  location: variable s3 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[265,29] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,int,int
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[267,19] cannot find symbol
+  symbol:   method setDisplayOrder(int)
+  location: variable s3 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[268,19] cannot find symbol
+  symbol:   method setActive(boolean)
+  location: variable s3 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[271,19] cannot find symbol
+  symbol:   method setTitle(java.lang.String)
+  location: variable s4 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[272,19] cannot find symbol
+  symbol:   method setSlug(java.lang.String)
+  location: variable s4 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[273,19] cannot find symbol
+  symbol:   method setDescription(java.lang.String)
+  location: variable s4 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[277,19] cannot find symbol
+  symbol:   method setIconName(java.lang.String)
+  location: variable s4 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[278,29] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,int,int
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[280,19] cannot find symbol
+  symbol:   method setDisplayOrder(int)
+  location: variable s4 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[281,19] cannot find symbol
+  symbol:   method setActive(boolean)
+  location: variable s4 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[296,19] cannot find symbol
+  symbol:   method setName(java.lang.String)
+  location: variable p1 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[297,19] cannot find symbol
+  symbol:   method setClientName(java.lang.String)
+  location: variable p1 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[298,19] cannot find symbol
+  symbol:   method setCaseStudyChallenge(java.lang.String)
+  location: variable p1 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[301,19] cannot find symbol
+  symbol:   method setCaseStudySolution(java.lang.String)
+  location: variable p1 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[305,19] cannot find symbol
+  symbol:   method setCaseStudyResult(java.lang.String)
+  location: variable p1 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[308,29] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,int,int
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[310,19] cannot find symbol
+  symbol:   method setDisplayOrder(int)
+  location: variable p1 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[311,19] cannot find symbol
+  symbol:   method setTechnologies(java.util.List<java.lang.String>)
+  location: variable p1 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[314,19] cannot find symbol
+  symbol:   method setName(java.lang.String)
+  location: variable p2 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[315,19] cannot find symbol
+  symbol:   method setClientName(java.lang.String)
+  location: variable p2 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[316,19] cannot find symbol
+  symbol:   method setCaseStudyChallenge(java.lang.String)
+  location: variable p2 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[319,19] cannot find symbol
+  symbol:   method setCaseStudySolution(java.lang.String)
+  location: variable p2 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[323,19] cannot find symbol
+  symbol:   method setCaseStudyResult(java.lang.String)
+  location: variable p2 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[326,29] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,int,int
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[328,19] cannot find symbol
+  symbol:   method setDisplayOrder(int)
+  location: variable p2 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[329,19] cannot find symbol
+  symbol:   method setTechnologies(java.util.List<java.lang.String>)
+  location: variable p2 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[332,19] cannot find symbol
+  symbol:   method setName(java.lang.String)
+  location: variable p3 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[333,19] cannot find symbol
+  symbol:   method setClientName(java.lang.String)
+  location: variable p3 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[334,19] cannot find symbol
+  symbol:   method setCaseStudyChallenge(java.lang.String)
+  location: variable p3 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[337,19] cannot find symbol
+  symbol:   method setCaseStudySolution(java.lang.String)
+  location: variable p3 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[341,19] cannot find symbol
+  symbol:   method setCaseStudyResult(java.lang.String)
+  location: variable p3 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[344,29] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,int,int
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[346,19] cannot find symbol
+  symbol:   method setDisplayOrder(int)
+  location: variable p3 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[347,19] cannot find symbol
+  symbol:   method setTechnologies(java.util.List<java.lang.String>)
+  location: variable p3 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[368,35] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,int,int
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[426,39] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,int,int
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/model/AgencyService.java:[43,8] nova.enterprise_service_hub.model.AgencyService is not abstract and does not override abstract method setTenantId(java.lang.String) in nova.enterprise_service_hub.security.TenantAware
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/model/Project.java:[43,8] nova.enterprise_service_hub.model.Project is not abstract and does not override abstract method setTenantId(java.lang.String) in nova.enterprise_service_hub.security.TenantAware
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/model/User.java:[44,8] nova.enterprise_service_hub.model.User is not abstract and does not override abstract method getPassword() in org.springframework.security.core.userdetails.UserDetails
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/model/User.java:[88,61] cannot find symbol
+  symbol:   method getName()
+  location: variable role of type nova.enterprise_service_hub.model.Role
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[54,16] cannot find symbol
+  symbol:   method setTitle(java.lang.String)
+  location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[55,16] cannot find symbol
+  symbol:   method setSlug(java.lang.String)
+  location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[56,16] cannot find symbol
+  symbol:   method setDescription(java.lang.String)
+  location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[57,16] cannot find symbol
+  symbol:   method setIconName(java.lang.String)
+  location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[58,16] cannot find symbol
+  symbol:   method setImage(nova.enterprise_service_hub.model.ImageMetadata)
+  location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[59,16] cannot find symbol
+  symbol:   method setActive(boolean)
+  location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[67,16] cannot find symbol
+  symbol:   method setTitle(java.lang.String)
+  location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[68,16] cannot find symbol
+  symbol:   method setSlug(java.lang.String)
+  location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[69,16] cannot find symbol
+  symbol:   method setDescription(java.lang.String)
+  location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[INFO] 100 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.679 s
+[INFO] Finished at: 2026-03-05T10:21:54Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.1:compile (default-compile) on project enterprise-service-hub: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/GlobalExceptionHandler.java:[129,25] method writeJsonError(jakarta.servlet.http.HttpServletResponse,int,java.lang.String,java.lang.String) is already defined in class nova.enterprise_service_hub.config.GlobalExceptionHandler
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[114,35] cannot find symbol
+[ERROR]   symbol:   method getRoles()
+[ERROR]   location: variable admin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[115,38] cannot find symbol
+[ERROR]   symbol:   method getRoles()
+[ERROR]   location: variable admin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[127,22] cannot find symbol
+[ERROR]   symbol:   method setFullName(java.lang.String)
+[ERROR]   location: variable admin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[128,22] cannot find symbol
+[ERROR]   symbol:   method setEmail(java.lang.String)
+[ERROR]   location: variable admin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[129,22] cannot find symbol
+[ERROR]   symbol:   method setPassword(java.lang.String)
+[ERROR]   location: variable admin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[130,22] cannot find symbol
+[ERROR]   symbol:   method setRoles(java.util.Set<nova.enterprise_service_hub.model.Role>)
+[ERROR]   location: variable admin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[131,22] cannot find symbol
+[ERROR]   symbol:   method setTenantId(java.lang.String)
+[ERROR]   location: variable admin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[146,32] cannot find symbol
+[ERROR]   symbol:   method getRoles()
+[ERROR]   location: variable sa of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[147,35] cannot find symbol
+[ERROR]   symbol:   method getRoles()
+[ERROR]   location: variable sa of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[158,27] cannot find symbol
+[ERROR]   symbol:   method setFullName(java.lang.String)
+[ERROR]   location: variable superAdmin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[159,27] cannot find symbol
+[ERROR]   symbol:   method setEmail(java.lang.String)
+[ERROR]   location: variable superAdmin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[160,27] cannot find symbol
+[ERROR]   symbol:   method setPassword(java.lang.String)
+[ERROR]   location: variable superAdmin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[161,27] cannot find symbol
+[ERROR]   symbol:   method setRoles(java.util.Set<nova.enterprise_service_hub.model.Role>)
+[ERROR]   location: variable superAdmin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[163,27] cannot find symbol
+[ERROR]   symbol:   method setTenantId(java.lang.String)
+[ERROR]   location: variable superAdmin of type nova.enterprise_service_hub.model.User
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[177,23] cannot find symbol
+[ERROR]   symbol:   method setContactEmail(java.lang.String)
+[ERROR]   location: variable tenant of type nova.enterprise_service_hub.model.Tenant
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[178,23] cannot find symbol
+[ERROR]   symbol:   method setEnabledModules(java.util.Set<java.lang.String>)
+[ERROR]   location: variable tenant of type nova.enterprise_service_hub.model.Tenant
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[190,23] cannot find symbol
+[ERROR]   symbol:   method setAgencyName(java.lang.String)
+[ERROR]   location: variable config of type nova.enterprise_service_hub.model.GlobalConfig
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[191,23] cannot find symbol
+[ERROR]   symbol:   method setContactEmail(java.lang.String)
+[ERROR]   location: variable config of type nova.enterprise_service_hub.model.GlobalConfig
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[192,23] cannot find symbol
+[ERROR]   symbol:   method setContactPhone(java.lang.String)
+[ERROR]   location: variable config of type nova.enterprise_service_hub.model.GlobalConfig
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[193,23] cannot find symbol
+[ERROR]   symbol:   method setLinkedInUrl(java.lang.String)
+[ERROR]   location: variable config of type nova.enterprise_service_hub.model.GlobalConfig
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[194,23] cannot find symbol
+[ERROR]   symbol:   method setTwitterUrl(java.lang.String)
+[ERROR]   location: variable config of type nova.enterprise_service_hub.model.GlobalConfig
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[195,23] cannot find symbol
+[ERROR]   symbol:   method setLogoUrl(java.lang.String)
+[ERROR]   location: variable config of type nova.enterprise_service_hub.model.GlobalConfig
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[206,19] cannot find symbol
+[ERROR]   symbol:   method setTitle(java.lang.String)
+[ERROR]   location: variable s1 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[207,19] cannot find symbol
+[ERROR]   symbol:   method setSubtitle(java.lang.String)
+[ERROR]   location: variable s1 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[208,19] cannot find symbol
+[ERROR]   symbol:   method setCtaText(java.lang.String)
+[ERROR]   location: variable s1 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[209,19] cannot find symbol
+[ERROR]   symbol:   method setCtaLink(java.lang.String)
+[ERROR]   location: variable s1 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[210,19] cannot find symbol
+[ERROR]   symbol:   method setDisplayOrder(int)
+[ERROR]   location: variable s1 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[213,19] cannot find symbol
+[ERROR]   symbol:   method setTitle(java.lang.String)
+[ERROR]   location: variable s2 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[214,19] cannot find symbol
+[ERROR]   symbol:   method setSubtitle(java.lang.String)
+[ERROR]   location: variable s2 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[215,19] cannot find symbol
+[ERROR]   symbol:   method setCtaText(java.lang.String)
+[ERROR]   location: variable s2 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[216,19] cannot find symbol
+[ERROR]   symbol:   method setCtaLink(java.lang.String)
+[ERROR]   location: variable s2 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[217,19] cannot find symbol
+[ERROR]   symbol:   method setDisplayOrder(int)
+[ERROR]   location: variable s2 of type nova.enterprise_service_hub.model.Slide
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[232,19] cannot find symbol
+[ERROR]   symbol:   method setTitle(java.lang.String)
+[ERROR]   location: variable s1 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[233,19] cannot find symbol
+[ERROR]   symbol:   method setSlug(java.lang.String)
+[ERROR]   location: variable s1 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[234,19] cannot find symbol
+[ERROR]   symbol:   method setDescription(java.lang.String)
+[ERROR]   location: variable s1 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[238,19] cannot find symbol
+[ERROR]   symbol:   method setIconName(java.lang.String)
+[ERROR]   location: variable s1 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[239,29] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,int,int
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[241,19] cannot find symbol
+[ERROR]   symbol:   method setDisplayOrder(int)
+[ERROR]   location: variable s1 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[242,19] cannot find symbol
+[ERROR]   symbol:   method setActive(boolean)
+[ERROR]   location: variable s1 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[245,19] cannot find symbol
+[ERROR]   symbol:   method setTitle(java.lang.String)
+[ERROR]   location: variable s2 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[246,19] cannot find symbol
+[ERROR]   symbol:   method setSlug(java.lang.String)
+[ERROR]   location: variable s2 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[247,19] cannot find symbol
+[ERROR]   symbol:   method setDescription(java.lang.String)
+[ERROR]   location: variable s2 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[251,19] cannot find symbol
+[ERROR]   symbol:   method setIconName(java.lang.String)
+[ERROR]   location: variable s2 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[252,29] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,int,int
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[254,19] cannot find symbol
+[ERROR]   symbol:   method setDisplayOrder(int)
+[ERROR]   location: variable s2 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[255,19] cannot find symbol
+[ERROR]   symbol:   method setActive(boolean)
+[ERROR]   location: variable s2 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[258,19] cannot find symbol
+[ERROR]   symbol:   method setTitle(java.lang.String)
+[ERROR]   location: variable s3 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[259,19] cannot find symbol
+[ERROR]   symbol:   method setSlug(java.lang.String)
+[ERROR]   location: variable s3 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[260,19] cannot find symbol
+[ERROR]   symbol:   method setDescription(java.lang.String)
+[ERROR]   location: variable s3 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[264,19] cannot find symbol
+[ERROR]   symbol:   method setIconName(java.lang.String)
+[ERROR]   location: variable s3 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[265,29] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,int,int
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[267,19] cannot find symbol
+[ERROR]   symbol:   method setDisplayOrder(int)
+[ERROR]   location: variable s3 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[268,19] cannot find symbol
+[ERROR]   symbol:   method setActive(boolean)
+[ERROR]   location: variable s3 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[271,19] cannot find symbol
+[ERROR]   symbol:   method setTitle(java.lang.String)
+[ERROR]   location: variable s4 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[272,19] cannot find symbol
+[ERROR]   symbol:   method setSlug(java.lang.String)
+[ERROR]   location: variable s4 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[273,19] cannot find symbol
+[ERROR]   symbol:   method setDescription(java.lang.String)
+[ERROR]   location: variable s4 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[277,19] cannot find symbol
+[ERROR]   symbol:   method setIconName(java.lang.String)
+[ERROR]   location: variable s4 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[278,29] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,int,int
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[280,19] cannot find symbol
+[ERROR]   symbol:   method setDisplayOrder(int)
+[ERROR]   location: variable s4 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[281,19] cannot find symbol
+[ERROR]   symbol:   method setActive(boolean)
+[ERROR]   location: variable s4 of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[296,19] cannot find symbol
+[ERROR]   symbol:   method setName(java.lang.String)
+[ERROR]   location: variable p1 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[297,19] cannot find symbol
+[ERROR]   symbol:   method setClientName(java.lang.String)
+[ERROR]   location: variable p1 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[298,19] cannot find symbol
+[ERROR]   symbol:   method setCaseStudyChallenge(java.lang.String)
+[ERROR]   location: variable p1 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[301,19] cannot find symbol
+[ERROR]   symbol:   method setCaseStudySolution(java.lang.String)
+[ERROR]   location: variable p1 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[305,19] cannot find symbol
+[ERROR]   symbol:   method setCaseStudyResult(java.lang.String)
+[ERROR]   location: variable p1 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[308,29] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,int,int
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[310,19] cannot find symbol
+[ERROR]   symbol:   method setDisplayOrder(int)
+[ERROR]   location: variable p1 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[311,19] cannot find symbol
+[ERROR]   symbol:   method setTechnologies(java.util.List<java.lang.String>)
+[ERROR]   location: variable p1 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[314,19] cannot find symbol
+[ERROR]   symbol:   method setName(java.lang.String)
+[ERROR]   location: variable p2 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[315,19] cannot find symbol
+[ERROR]   symbol:   method setClientName(java.lang.String)
+[ERROR]   location: variable p2 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[316,19] cannot find symbol
+[ERROR]   symbol:   method setCaseStudyChallenge(java.lang.String)
+[ERROR]   location: variable p2 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[319,19] cannot find symbol
+[ERROR]   symbol:   method setCaseStudySolution(java.lang.String)
+[ERROR]   location: variable p2 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[323,19] cannot find symbol
+[ERROR]   symbol:   method setCaseStudyResult(java.lang.String)
+[ERROR]   location: variable p2 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[326,29] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,int,int
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[328,19] cannot find symbol
+[ERROR]   symbol:   method setDisplayOrder(int)
+[ERROR]   location: variable p2 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[329,19] cannot find symbol
+[ERROR]   symbol:   method setTechnologies(java.util.List<java.lang.String>)
+[ERROR]   location: variable p2 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[332,19] cannot find symbol
+[ERROR]   symbol:   method setName(java.lang.String)
+[ERROR]   location: variable p3 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[333,19] cannot find symbol
+[ERROR]   symbol:   method setClientName(java.lang.String)
+[ERROR]   location: variable p3 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[334,19] cannot find symbol
+[ERROR]   symbol:   method setCaseStudyChallenge(java.lang.String)
+[ERROR]   location: variable p3 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[337,19] cannot find symbol
+[ERROR]   symbol:   method setCaseStudySolution(java.lang.String)
+[ERROR]   location: variable p3 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[341,19] cannot find symbol
+[ERROR]   symbol:   method setCaseStudyResult(java.lang.String)
+[ERROR]   location: variable p3 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[344,29] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,int,int
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[346,19] cannot find symbol
+[ERROR]   symbol:   method setDisplayOrder(int)
+[ERROR]   location: variable p3 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[347,19] cannot find symbol
+[ERROR]   symbol:   method setTechnologies(java.util.List<java.lang.String>)
+[ERROR]   location: variable p3 of type nova.enterprise_service_hub.model.Project
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[368,35] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,int,int
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/config/DataInitializer.java:[426,39] constructor ImageMetadata in class nova.enterprise_service_hub.model.ImageMetadata cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,int,int
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/model/AgencyService.java:[43,8] nova.enterprise_service_hub.model.AgencyService is not abstract and does not override abstract method setTenantId(java.lang.String) in nova.enterprise_service_hub.security.TenantAware
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/model/Project.java:[43,8] nova.enterprise_service_hub.model.Project is not abstract and does not override abstract method setTenantId(java.lang.String) in nova.enterprise_service_hub.security.TenantAware
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/model/User.java:[44,8] nova.enterprise_service_hub.model.User is not abstract and does not override abstract method getPassword() in org.springframework.security.core.userdetails.UserDetails
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/model/User.java:[88,61] cannot find symbol
+[ERROR]   symbol:   method getName()
+[ERROR]   location: variable role of type nova.enterprise_service_hub.model.Role
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[54,16] cannot find symbol
+[ERROR]   symbol:   method setTitle(java.lang.String)
+[ERROR]   location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[55,16] cannot find symbol
+[ERROR]   symbol:   method setSlug(java.lang.String)
+[ERROR]   location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[56,16] cannot find symbol
+[ERROR]   symbol:   method setDescription(java.lang.String)
+[ERROR]   location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[57,16] cannot find symbol
+[ERROR]   symbol:   method setIconName(java.lang.String)
+[ERROR]   location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[58,16] cannot find symbol
+[ERROR]   symbol:   method setImage(nova.enterprise_service_hub.model.ImageMetadata)
+[ERROR]   location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[59,16] cannot find symbol
+[ERROR]   symbol:   method setActive(boolean)
+[ERROR]   location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[67,16] cannot find symbol
+[ERROR]   symbol:   method setTitle(java.lang.String)
+[ERROR]   location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[68,16] cannot find symbol
+[ERROR]   symbol:   method setSlug(java.lang.String)
+[ERROR]   location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] /C:/Users/profa/OneDrive/Desktop/Project/Enterprise-Service-Hub/enterprise-service-hub/src/main/java/nova/enterprise_service_hub/service/AgencyServiceService.java:[69,16] cannot find symbol
+[ERROR]   symbol:   method setDescription(java.lang.String)
+[ERROR]   location: variable service of type nova.enterprise_service_hub.model.AgencyService
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,41 @@
+services:
+  # Database: PostgreSQL 17 (The Brain)
+  db:
+    image: postgres:17-alpine
+    container_name: esh-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: elite_password_2026
+      POSTGRES_DB: enterprise_hub
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # Database UI: pgAdmin (For visual management)
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: esh-pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@esh.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+
+  # Cache: Redis 7 (For @Cacheable / session caching)
+  redis:
+    image: redis:7-alpine
+    container_name: esh-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  postgres_data:
+  redis_data:

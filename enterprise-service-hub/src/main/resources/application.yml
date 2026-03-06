@@ -1,0 +1,141 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  ENTERPRISE SERVICE HUB — Application Configuration                       ║
+# ║  Nova Agency | Java 21 + Spring Boot 4 + PostgreSQL 17                     ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+spring:
+  application:
+    name: enterprise-service-hub
+
+  # ── File Upload Limits ──────────────────────────────────────────────────
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 10MB
+
+  # ── Virtual Threads (Project Loom) ──────────────────────────────────────────
+  # Enables lightweight virtual threads for all request handling.
+  # Dramatically improves throughput under concurrent B2B load (target: 10-50ms).
+  threads:
+    virtual:
+      enabled: true
+
+  # ── PostgreSQL Datasource ───────────────────────────────────────────────────
+  # Connects the native Spring Boot app to the Dockerized PostgreSQL instance.
+  datasource:
+    url: jdbc:postgresql://localhost:5432/enterprise_hub
+    username: admin
+    password: elite_password_2026
+    driver-class-name: org.postgresql.Driver
+
+    # HikariCP connection pool tuning for high-performance
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      idle-timeout: 30000
+      connection-timeout: 5000
+      max-lifetime: 1800000
+      pool-name: ESH-HikariPool
+
+  # ── JPA / Hibernate ────────────────────────────────────────────────────────
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update                # Auto-sync entities → PostgreSQL schema
+    show-sql: true                     # Log SQL for development debugging
+    open-in-view: false                # Disable OSIV for cleaner architecture
+    properties:
+      hibernate:
+        format_sql: true               # Pretty-print SQL in console
+        jdbc:
+          batch_size: 25               # Batch inserts/updates for performance
+        order_inserts: true
+        order_updates: true
+
+  # ── Redis Cache (Phase 1.2) ─────────────────────────────────────────────
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      timeout: 2000ms
+  cache:
+    type: redis
+    redis:
+      time-to-live: 300000   # 5 min default TTL
+      cache-null-values: false
+
+  # ── Mail (Phase 7.3) ───────────────────────────────────────────────────
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    default-encoding: UTF-8
+
+# ── Server Configuration ──────────────────────────────────────────────────────
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+# ── Logging ───────────────────────────────────────────────────────────────────
+logging:
+  level:
+    root: INFO
+    nova.enterprise_service_hub: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+# ── JWT Configuration ─────────────────────────────────────────────────────────
+app:
+  jwt:
+    # Base64-encoded 256-bit secret key for HS256 signing
+    # ⚠️ ROTATE this key and use env variables in production!
+    secret: dGhpc0lzQVN1cGVyU2VjcmV0S2V5Rm9yRW50ZXJwcmlzZVNlcnZpY2VIdWIyMDI2
+    expiration-ms: 86400000  # 24 hours in milliseconds
+
+  monitoring:
+    health:
+      threshold: 50 # Flag system health if response time > 50ms (in ms)
+
+# ── Actuator & Monitoring ────────────────────────────────────────────────────
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,prometheus
+  endpoint:
+    health:
+      show-details: when_authorized
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true
+      sla:
+        http.server.requests: 50ms,100ms
+
+# ── OpenAI / LLM Configuration ───────────────────────────────────────────────
+# API key is loaded from environment variable OPENAI_API_KEY (never hardcoded).
+# Override model/tokens via env vars for cost control in production.
+ai:
+  openai:
+    api-key: ${OPENAI_API_KEY:}
+    model: ${OPENAI_MODEL:gpt-4o-mini}
+    max-tokens: ${OPENAI_MAX_TOKENS:1024}
+    temperature: ${OPENAI_TEMPERATURE:0.7}
+
+# ── Stripe Billing (Phase 7.2) ───────────────────────────────────────────────
+stripe:
+  api-key: ${STRIPE_SECRET_KEY:}
+  webhook-secret: ${STRIPE_WEBHOOK_SECRET:}
+  success-url: ${STRIPE_SUCCESS_URL:http://localhost:3000/payment/success}
+  cancel-url: ${STRIPE_CANCEL_URL:http://localhost:3000/payment/cancel}
