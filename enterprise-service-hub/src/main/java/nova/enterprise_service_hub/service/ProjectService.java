@@ -77,10 +77,17 @@ public class ProjectService {
         Project project = new Project();
         project.setName(StringSanitizer.stripAll(request.name()));
         project.setClientName(StringSanitizer.stripAll(request.clientName()));
+        project.setPreviewUrl(request.previewUrl());
         project.setCaseStudyChallenge(StringSanitizer.stripAll(request.caseStudyChallenge()));
         project.setCaseStudySolution(StringSanitizer.stripAll(request.caseStudySolution()));
         project.setCaseStudyResult(StringSanitizer.stripAll(request.caseStudyResult()));
         project.setImage(assetService.validateAndBuild(request.image()));
+        if (request.gallery() != null) {
+            project.setGallery(request.gallery().stream()
+                    .map(assetService::validateAndBuild)
+                    .filter(java.util.Objects::nonNull)
+                    .collect(java.util.stream.Collectors.toCollection(ArrayList::new)));
+        }
         project.setTechnologies(
                 request.technologies() != null ? new ArrayList<>(request.technologies()) : new ArrayList<>());
         Project saved = repository.save(project);
@@ -102,10 +109,18 @@ public class ProjectService {
                 .orElseThrow(() -> new EntityNotFoundException("Project not found with id: " + id));
         project.setName(StringSanitizer.stripAll(request.name()));
         project.setClientName(StringSanitizer.stripAll(request.clientName()));
+        project.setPreviewUrl(request.previewUrl());
         project.setCaseStudyChallenge(StringSanitizer.stripAll(request.caseStudyChallenge()));
         project.setCaseStudySolution(StringSanitizer.stripAll(request.caseStudySolution()));
         project.setCaseStudyResult(StringSanitizer.stripAll(request.caseStudyResult()));
         project.setImage(assetService.validateAndBuild(request.image()));
+        if (request.gallery() != null) {
+            project.getGallery().clear();
+            request.gallery().stream()
+                    .map(assetService::validateAndBuild)
+                    .filter(java.util.Objects::nonNull)
+                    .forEach(project.getGallery()::add);
+        }
         if (request.technologies() != null) {
             project.setTechnologies(new ArrayList<>(request.technologies()));
         }
@@ -139,6 +154,16 @@ public class ProjectService {
         }
         if (request.image() != null) {
             project.setImage(assetService.validateAndBuild(request.image()));
+        }
+        if (request.previewUrl() != null) {
+            project.setPreviewUrl(request.previewUrl());
+        }
+        if (request.gallery() != null) {
+            project.getGallery().clear();
+            request.gallery().stream()
+                    .map(assetService::validateAndBuild)
+                    .filter(java.util.Objects::nonNull)
+                    .forEach(project.getGallery()::add);
         }
         if (request.displayOrder() != null) {
             project.setDisplayOrder(request.displayOrder());

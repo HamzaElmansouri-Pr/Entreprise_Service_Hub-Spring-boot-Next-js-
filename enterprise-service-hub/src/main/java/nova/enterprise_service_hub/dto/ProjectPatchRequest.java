@@ -7,13 +7,15 @@ import java.util.List;
  * All fields are optional. Only non-null fields are applied.
  */
 public record ProjectPatchRequest(
-        String name,
-        String clientName,
-        String caseStudyChallenge,
-        String caseStudySolution,
-        String caseStudyResult,
-        ImageMetadataDTO image,
-        Integer displayOrder,
-        Boolean archived,
-        List<String> technologies) {
+                String name,
+                String clientName,
+                String caseStudyChallenge,
+                String caseStudySolution,
+                String caseStudyResult,
+                String previewUrl,
+                ImageMetadataDTO image,
+                List<ImageMetadataDTO> gallery,
+                Integer displayOrder,
+                Boolean archived,
+                List<String> technologies) {
 }

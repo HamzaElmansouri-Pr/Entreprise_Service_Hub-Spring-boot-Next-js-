@@ -64,7 +64,8 @@ public class PageSectionService {
                     entity.getImage().getUrl(),
                     entity.getImage().getAltText(),
                     entity.getImage().getWidth(),
-                    entity.getImage().getHeight());
+                    entity.getImage().getHeight(),
+                    entity.getImage().getThumbnailUrl());
         }
 
         Map<String, Object> contentData = entity.getContentData() != null

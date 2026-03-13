@@ -7,5 +7,6 @@ public record ImageMetadataDTO(
         String url,
         String altText,
         Integer width,
-        Integer height) {
+        Integer height,
+        String thumbnailUrl) {
 }

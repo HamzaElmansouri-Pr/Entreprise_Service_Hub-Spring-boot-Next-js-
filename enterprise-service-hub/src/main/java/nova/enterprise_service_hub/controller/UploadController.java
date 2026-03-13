@@ -23,9 +23,16 @@ public class UploadController {
     }
 
     @PostMapping("/image")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'SUPER_ADMIN')")
     public ResponseEntity<Map<String, String>> uploadImage(@RequestParam("file") MultipartFile file) {
         String url = assetService.storeImage(file);
+        return ResponseEntity.ok(Map.of("url", url));
+    }
+
+    @PostMapping("/video")
+    @PreAuthorize("hasAnyRole('ADMIN', 'SUPER_ADMIN')")
+    public ResponseEntity<Map<String, String>> uploadVideo(@RequestParam("file") MultipartFile file) {
+        String url = assetService.storeVideo(file);
         return ResponseEntity.ok(Map.of("url", url));
     }
 }

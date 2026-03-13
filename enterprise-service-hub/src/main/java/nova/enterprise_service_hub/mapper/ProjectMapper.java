@@ -25,6 +25,8 @@ public interface ProjectMapper {
 
     ImageMetadataDTO toImageDto(ImageMetadata image);
 
+    List<ImageMetadataDTO> toImageDtoList(List<ImageMetadata> images);
+
     default CaseStudyDTO toCaseStudy(Project entity) {
         return new CaseStudyDTO(
                 entity.getCaseStudyChallenge(),

@@ -70,13 +70,13 @@ public class ProjectController {
     }
 
     @PostMapping
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'SUPER_ADMIN')")
     public ResponseEntity<ProjectDTO> createProject(@Valid @RequestBody ProjectRequest request) {
         return ResponseEntity.status(HttpStatus.CREATED).body(projectService.create(request));
     }
 
     @PutMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'SUPER_ADMIN', 'USER')")
     public ResponseEntity<ProjectDTO> updateProject(@PathVariable Long id,
             @Valid @RequestBody ProjectRequest request) {
         return ResponseEntity.ok(projectService.update(id, request));
@@ -87,7 +87,7 @@ public class ProjectController {
      * Archive, reorder, or update individual fields.
      */
     @PatchMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'SUPER_ADMIN', 'USER')")
     public ResponseEntity<ProjectDTO> patchProject(@PathVariable Long id,
             @RequestBody ProjectPatchRequest request) {
         return ResponseEntity.ok(projectService.patch(id, request));
@@ -98,7 +98,7 @@ public class ProjectController {
      * Sets archived = true instead of removing from the database.
      */
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'SUPER_ADMIN')")
     public ResponseEntity<Void> deleteProject(@PathVariable Long id) {
         projectService.delete(id);
         return ResponseEntity.noContent().build();

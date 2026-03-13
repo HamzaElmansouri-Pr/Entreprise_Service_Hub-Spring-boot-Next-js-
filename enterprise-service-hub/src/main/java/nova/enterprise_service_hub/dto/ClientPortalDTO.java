@@ -7,6 +7,7 @@ import java.util.List;
  * Client Portal dashboard view — aggregated data for a specific client.
  */
 public record ClientPortalDTO(
+        Long clientId,
         String clientName,
         String companyName,
         List<PortalProject> projects,

@@ -22,6 +22,14 @@ import lombok.Setter;
 @AllArgsConstructor
 public class ImageMetadata {
 
+    public ImageMetadata(String url, String altText, Integer width, Integer height) {
+        this.url = url;
+        this.altText = altText;
+        this.width = width;
+        this.height = height;
+        this.thumbnailUrl = null;
+    }
+
     @Size(max = 500, message = "Image URL must not exceed 500 characters")
     @Column(length = 500)
     private String url;
@@ -33,6 +41,10 @@ public class ImageMetadata {
     private Integer width;
 
     private Integer height;
+
+    @Size(max = 500)
+    @Column(name = "thumbnail_url", length = 500)
+    private String thumbnailUrl;
 
     // Explicit Getters and Setters
     public String getUrl() {
@@ -65,5 +77,13 @@ public class ImageMetadata {
 
     public void setHeight(Integer height) {
         this.height = height;
+    }
+
+    public String getThumbnailUrl() {
+        return thumbnailUrl;
+    }
+
+    public void setThumbnailUrl(String thumbnailUrl) {
+        this.thumbnailUrl = thumbnailUrl;
     }
 }

@@ -1,0 +1,61 @@
+# Enterprise Service Hub - Ignore Rules
+
+# ── IDEs & System ──────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.log
+.DS_Store
+Thumbs.db
+
+# ── Java / Maven (Backend) ─────────────────────────────────────────────────
+enterprise-service-hub/target/
+enterprise-service-hub/.mvn/wrapper/maven-wrapper.jar
+enterprise-service-hub/mvnw
+enterprise-service-hub/mvnw.cmd
+*.class
+*.jar
+*.war
+*.ear
+
+# ── Node.js / Next.js (Frontend) ───────────────────────────────────────────
+nova-frontend/node_modules/
+nova-frontend/.next/
+nova-frontend/out/
+nova-frontend/build/
+nova-frontend/.vercel/
+*.tsbuildinfo
+
+# ── Environment & Secrets ──────────────────────────────────────────────────
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+
+# ── Docker ─────────────────────────────────────────────────────────────────
+.docker/
+# Keep docker-compose.yml as it defines the dev environment
+# Ignore local data volumes
+postgres_data/
+redis_data/
+
+# ── Temporary & Artifacts ──────────────────────────────────────────────────
+temp_api.txt
+fix_api.js
+fix_lib_api.js
+/tmp/
+.gemini/
+brain/
+
+# ── Project Specifics ──────────────────────────────────────────────────────
+**/uploads/
+**/logs/
+*.run.log
+enterprise-service-hub/*.txt
+enterprise-service-hub/.factorypath
+enterprise-service-hub/.project
+enterprise-service-hub/.classpath
+enterprise-service-hub/.settings/

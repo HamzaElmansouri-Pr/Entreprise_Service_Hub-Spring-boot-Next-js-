@@ -99,6 +99,7 @@ public class DataInitializer implements CommandLineRunner {
                         seedRoles();
                         seedAdminUser();
                         seedSuperAdminUser();
+                        seedStandardUser();
                         seedDefaultTenant();
                         seedGlobalConfig();
                         seedSlides();
@@ -115,6 +116,7 @@ public class DataInitializer implements CommandLineRunner {
                         seedClientUsers();
                         seedSubscription();
                         seedNotifications();
+                        logCredentials();
                 } finally {
                         TenantContext.clear();
                 }
@@ -192,6 +194,27 @@ public class DataInitializer implements CommandLineRunner {
 
                 userRepo.save(superAdmin);
                 log.info("✅ Seeded super-admin user: superadmin@nova.platform");
+        }
+
+        private void seedStandardUser() {
+                Role userRole = roleRepo.findByName("ROLE_USER")
+                                .orElseThrow(() -> new IllegalStateException("ROLE_USER not found"));
+
+                if (userRepo.findByEmail("user@nova.agency").isPresent()) {
+                        log.info("⚡ Standard user already exists — skipping");
+                        return;
+                }
+
+                log.info("🌱 Seeding Standard User...");
+                User user = new User();
+                user.setFullName("Standard User");
+                user.setEmail("user@nova.agency");
+                user.setPassword(passwordEncoder.encode("user2026!"));
+                user.setRoles(Set.of(userRole));
+                user.setTenantId(DEFAULT_TENANT);
+
+                userRepo.save(user);
+                log.info("✅ Seeded standard user: user@nova.agency");
         }
 
         private void seedDefaultTenant() {
@@ -1340,5 +1363,17 @@ public class DataInitializer implements CommandLineRunner {
 
                 notificationRepo.saveAll(List.of(n1, n2, n3, n4, n5, n6));
                 log.info("✅ Seeded {} Notifications", 6);
+        }
+
+        private void logCredentials() {
+                log.info("\n\n" +
+                                "╔════════════════════════════════════════════════════════════════════╗\n" +
+                                "║  ENTERPRISE SERVICE HUB — CREDENTIALS (DEV ONLY)                   ║\n" +
+                                "╠════════════════════════════════════════════════════════════════════╣\n" +
+                                "║  Admin      : admin@nova.agency          / elite2026!              ║\n" +
+                                "║  SuperAdmin : superadmin@nova.platform   / superAdmin2026!         ║\n" +
+                                "║  User       : user@nova.agency           / user2026!               ║\n" +
+                                "║  Client     : m.torres@transcorp.com     / client2026!             ║\n" +
+                                "╚════════════════════════════════════════════════════════════════════╝\n");
         }
 }

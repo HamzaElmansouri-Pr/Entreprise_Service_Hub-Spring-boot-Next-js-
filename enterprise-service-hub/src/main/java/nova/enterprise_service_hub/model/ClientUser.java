@@ -50,6 +50,9 @@ public class ClientUser {
     @Column(name = "password_hash", length = 200)
     private String passwordHash;
 
+    @Column(name = "phone_number", length = 30)
+    private String phoneNumber;
+
     @Column(name = "company_name", length = 200)
     private String companyName;
 

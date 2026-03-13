@@ -28,10 +28,14 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 class ProjectServiceTest {
 
-    @Mock private ProjectRepository repository;
-    @Mock private ProjectMapper mapper;
-    @Mock private AssetService assetService;
-    @Mock private ApplicationEventPublisher eventPublisher;
+    @Mock
+    private ProjectRepository repository;
+    @Mock
+    private ProjectMapper mapper;
+    @Mock
+    private AssetService assetService;
+    @Mock
+    private ApplicationEventPublisher eventPublisher;
 
     private ProjectService projectService;
 
@@ -50,7 +54,7 @@ class ProjectServiceTest {
     }
 
     private ProjectDTO createProjectDTO(Long id, String name) {
-        return new ProjectDTO(id, name, "Test Client", null, null,
+        return new ProjectDTO(id, name, "Test Client", null, null, null, List.of(),
                 0, false, List.of(), null, null);
     }
 
@@ -113,7 +117,7 @@ class ProjectServiceTest {
         @DisplayName("should create and return new project")
         void createsProject() {
             ProjectRequest request = new ProjectRequest(
-                    "New Project", "Client X", null, null, null, null, List.of("Java"));
+                    "New Project", "Client X", null, null, null, null, null, null, List.of("Java"));
             Project saved = createProject(1L, "New Project");
             ProjectDTO dto = createProjectDTO(1L, "New Project");
 

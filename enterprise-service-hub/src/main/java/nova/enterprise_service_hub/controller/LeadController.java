@@ -65,14 +65,14 @@ public class LeadController {
     }
 
     @PatchMapping("/{id}/status")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     public LeadDTO updateStatus(@PathVariable Long id, @RequestBody Map<String, String> body) {
         Lead.LeadStatus status = Lead.LeadStatus.valueOf(body.get("status"));
         return leadService.updateStatus(id, status);
     }
 
     @PostMapping("/{id}/notes")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     public LeadDTO addNote(@PathVariable Long id, @RequestBody Map<String, String> body) {
         return leadService.addNote(id, body.get("note"));
     }

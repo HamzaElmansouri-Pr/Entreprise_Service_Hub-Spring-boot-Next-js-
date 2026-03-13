@@ -54,7 +54,7 @@ public class SecurityConfig {
                         .requestMatchers("/health/**").permitAll()
                         .requestMatchers("/actuator/**").permitAll()
                         .requestMatchers("/v1/auth/**").permitAll()
-                        .requestMatchers("/uploads/**").permitAll()
+                        .requestMatchers("/v1/uploads/**", "/uploads/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/v1/services/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/v1/projects/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/v1/slides/**").permitAll()
@@ -98,7 +98,7 @@ public class SecurityConfig {
         // Use allowedOriginPatterns for production flexibility with subdomains if
         // needed,
         // or strictly allowedOrigins if predefined. Adjust as needed for deployed env.
-        configuration.setAllowedOriginPatterns(Arrays.asList("http://localhost:3000", "https://*.yourdomain.com"));
+        configuration.setAllowedOriginPatterns(Arrays.asList("*"));
 
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "Accept-Language"));

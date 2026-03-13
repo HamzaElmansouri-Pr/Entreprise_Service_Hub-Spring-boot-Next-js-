@@ -18,6 +18,10 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
+import nova.enterprise_service_hub.dto.ClientProfileUpdateDTO;
+import nova.enterprise_service_hub.dto.PortalProjectDetailDTO;
+import nova.enterprise_service_hub.model.ProjectUpdate;
+import nova.enterprise_service_hub.model.ProjectFile;
 
 /**
  * Client Portal Service — secure access for external clients
@@ -132,6 +136,7 @@ public class ClientPortalService {
                 .toList();
 
         return new ClientPortalDTO(
+                client.getId(),
                 client.getFullName(),
                 client.getCompanyName(),
                 portalProjects,
@@ -227,6 +232,72 @@ public class ClientPortalService {
         client.setInviteAccepted(true);
         client.setInviteToken(null); // invalidate token
         return clientUserRepository.save(client);
+    }
+
+    /**
+     * Update client profile (name, phone, password).
+     */
+    @Transactional
+    public void updateClientProfile(Long clientUserId, ClientProfileUpdateDTO dto) {
+        ClientUser client = clientUserRepository.findById(clientUserId)
+                .orElseThrow(() -> new EntityNotFoundException("Client not found"));
+
+        if (dto.fullName() != null && !dto.fullName().isBlank()) {
+            client.setFullName(dto.fullName());
+        }
+        if (dto.phoneNumber() != null) {
+            client.setPhoneNumber(dto.phoneNumber());
+        }
+        if (dto.password() != null && !dto.password().isBlank()) {
+            client.setPasswordHash(passwordEncoder.encode(dto.password()));
+        }
+        clientUserRepository.save(client);
+    }
+
+    /**
+     * Get detailed project view for client (including updates and files).
+     */
+    public PortalProjectDetailDTO getProjectDetails(Long clientUserId, Long projectId) {
+        ClientUser client = clientUserRepository.findById(clientUserId)
+                .orElseThrow(() -> new EntityNotFoundException("Client not found"));
+
+        Project project = projectRepository.findById(projectId)
+                .orElseThrow(() -> new EntityNotFoundException("Project not found"));
+
+        // Security check: ensure project belongs to client's tenant and company
+        if (!project.getTenantId().equals(client.getTenantId())) {
+            throw new SecurityException("Access denied");
+        }
+        
+        String clientName = client.getCompanyName() != null ? client.getCompanyName() : client.getFullName();
+        if (!project.getClientName().equalsIgnoreCase(clientName)) {
+            throw new SecurityException("Access denied to this project");
+        }
+
+        List<PortalProjectDetailDTO.ProjectUpdateDTO> updates = project.getUpdates().stream()
+                .map(u -> new PortalProjectDetailDTO.ProjectUpdateDTO(u.getId(), u.getTitle(), u.getDetail(), u.getTimestamp()))
+                .toList();
+
+        List<PortalProjectDetailDTO.ProjectFileDTO> files = project.getFiles().stream()
+                .map(f -> new PortalProjectDetailDTO.ProjectFileDTO(
+                        f.getId(), f.getFileName(), f.getFileUrl(), f.getFileType(),
+                        f.getFileSize() != null ? f.getFileSize() : 0, f.getUploadedAt()))
+                .toList();
+
+        String status = project.isArchived() ? "Completed" : "In Progress";
+        int progress = project.isArchived() ? 100 : estimateProgress(project);
+
+        String description = project.getCaseStudyChallenge(); // fallback description
+
+        return new PortalProjectDetailDTO(
+                project.getId(),
+                project.getName(),
+                status,
+                progress,
+                description,
+                updates,
+                files
+        );
     }
 
     // ── Helpers ──────────────────────────────────────────────────────────

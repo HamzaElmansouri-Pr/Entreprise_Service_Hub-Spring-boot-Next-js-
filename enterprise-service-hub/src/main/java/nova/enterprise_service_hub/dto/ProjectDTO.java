@@ -8,14 +8,16 @@ import java.util.List;
  * Includes displayOrder, archived status, and structured case study + image.
  */
 public record ProjectDTO(
-        Long id,
-        String name,
-        String clientName,
-        CaseStudyDTO caseStudy,
-        ImageMetadataDTO image,
-        Integer displayOrder,
-        boolean archived,
-        List<String> technologies,
-        Instant createdAt,
-        Instant updatedAt) {
+                Long id,
+                String name,
+                String clientName,
+                CaseStudyDTO caseStudy,
+                String previewUrl,
+                ImageMetadataDTO image,
+                List<ImageMetadataDTO> gallery,
+                Integer displayOrder,
+                boolean archived,
+                List<String> technologies,
+                Instant createdAt,
+                Instant updatedAt) {
 }

@@ -15,6 +15,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.hibernate.envers.Audited;
+import org.hibernate.envers.NotAudited;
 
 import java.time.Instant;
 import java.util.ArrayList;
@@ -60,6 +61,10 @@ public class Project implements TenantAware {
         @Column(name = "tenant_id", length = 50)
         private String tenantId;
 
+        @Size(max = 500)
+        @Column(name = "preview_url", length = 500)
+        private String previewUrl;
+
         // ── Structured Case Study Fields ─────────────────────────────────────
 
         @Size(max = 5000)
@@ -85,6 +90,11 @@ public class Project implements TenantAware {
         })
         private ImageMetadata image;
 
+        @NotAudited
+        @ElementCollection(fetch = FetchType.EAGER)
+        @CollectionTable(name = "project_gallery", joinColumns = @JoinColumn(name = "project_id"))
+        private List<ImageMetadata> gallery = new ArrayList<>();
+
         // ── Display & Lifecycle ──────────────────────────────────────────────
 
         @Column(name = "display_order", nullable = false)
@@ -97,6 +107,16 @@ public class Project implements TenantAware {
         @CollectionTable(name = "project_technologies", joinColumns = @JoinColumn(name = "project_id"))
         @Column(name = "technology", length = 80)
         private List<String> technologies = new ArrayList<>();
+
+        @NotAudited
+        @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, orphanRemoval = true)
+        @OrderBy("timestamp DESC")
+        private List<ProjectUpdate> updates = new ArrayList<>();
+
+        @NotAudited
+        @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, orphanRemoval = true)
+        @OrderBy("uploadedAt DESC")
+        private List<ProjectFile> files = new ArrayList<>();
 
         @CreatedDate
         @Column(name = "created_at", updatable = false)

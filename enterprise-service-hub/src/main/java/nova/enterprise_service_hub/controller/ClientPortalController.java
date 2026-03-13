@@ -1,7 +1,9 @@
 package nova.enterprise_service_hub.controller;
 
 import nova.enterprise_service_hub.dto.ClientPortalDTO;
+import nova.enterprise_service_hub.dto.ClientProfileUpdateDTO;
 import nova.enterprise_service_hub.dto.InvoiceDTO;
+import nova.enterprise_service_hub.dto.PortalProjectDetailDTO;
 import nova.enterprise_service_hub.model.ClientUser;
 import nova.enterprise_service_hub.service.ClientPortalService;
 import org.springframework.http.ResponseEntity;
@@ -62,6 +64,27 @@ public class ClientPortalController {
             @PathVariable Long invoiceId) {
         String checkoutUrl = portalService.createInvoiceCheckout(clientId, invoiceId);
         return ResponseEntity.ok(Map.of("checkoutUrl", checkoutUrl));
+    }
+
+    /**
+     * Get details of a specific project.
+     */
+    @GetMapping("/{clientId}/projects/{projectId}")
+    public PortalProjectDetailDTO getProjectDetails(
+            @PathVariable Long clientId,
+            @PathVariable Long projectId) {
+        return portalService.getProjectDetails(clientId, projectId);
+    }
+
+    /**
+     * Update client profile.
+     */
+    @PutMapping("/{clientId}/profile")
+    public ResponseEntity<Void> updateProfile(
+            @PathVariable Long clientId,
+            @RequestBody ClientProfileUpdateDTO dto) {
+        portalService.updateClientProfile(clientId, dto);
+        return ResponseEntity.ok().build();
     }
 
     /**

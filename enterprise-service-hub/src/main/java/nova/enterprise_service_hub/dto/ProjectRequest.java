@@ -10,15 +10,17 @@ import java.util.List;
  * Case study is accepted as three structured sections.
  */
 public record ProjectRequest(
-        @NotBlank(message = "Project name is required") @Size(min = 2, max = 150) String name,
+                @NotBlank(message = "Project name is required") @Size(min = 2, max = 150) String name,
 
-        @NotBlank(message = "Client name is required") @Size(min = 2, max = 150) String clientName,
+                @NotBlank(message = "Client name is required") @Size(min = 2, max = 150) String clientName,
 
-        @Size(max = 5000) String caseStudyChallenge,
-        @Size(max = 5000) String caseStudySolution,
-        @Size(max = 5000) String caseStudyResult,
+                @Size(max = 5000) String caseStudyChallenge,
+                @Size(max = 5000) String caseStudySolution,
+                @Size(max = 5000) String caseStudyResult,
 
-        ImageMetadataDTO image,
+                @Size(max = 500) String previewUrl,
+                ImageMetadataDTO image,
+                List<ImageMetadataDTO> gallery,
 
-        List<String> technologies) {
+                List<String> technologies) {
 }

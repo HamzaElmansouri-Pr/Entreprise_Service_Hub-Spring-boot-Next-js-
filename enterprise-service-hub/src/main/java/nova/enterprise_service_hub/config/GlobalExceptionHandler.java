@@ -106,6 +106,13 @@ public class GlobalExceptionHandler {
                         getMessage("error.ai_service", new Object[] { ex.getMessage() })));
     }
 
+    @ExceptionHandler(org.springframework.web.multipart.MaxUploadSizeExceededException.class)
+    public ResponseEntity<ErrorResponse> handleMaxUploadSizeExceeded(org.springframework.web.multipart.MaxUploadSizeExceededException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(
+                new ErrorResponse(400, "File Too Large", 
+                        getMessage("error.file_too_large", new Object[] { "20MB" })));
+    }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handleGeneral(Exception ex) {
         log.error("Unhandled exception caught by GlobalExceptionHandler", ex);
