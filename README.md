@@ -26,7 +26,7 @@ The easiest way to start the entire environment is using the provided startup sc
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/[your-username]/enterprise-service-hub.git
+    git clone https://github.com/HamzaElmansouri-Pr/Entreprise_Service_Hub-Spring-boot-Next-js-.git
     cd enterprise-service-hub
     ```
 2.  **Start all services**:
